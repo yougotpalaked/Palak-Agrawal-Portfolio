@@ -324,8 +324,8 @@ body.dark-mode .burger div {
     display: flex;
     align-items: center;
     justify-content: center; /* Center content horizontally */
-    background-color: var(--accent-color);
-    margin-top: 90px; /* To account for fixed header */
+    background-color: var(--bg-color);
+    margin-top: 110px; /* To account for fixed header */
     padding: 0 var(--spacing-lg);
     transition: background-color 0.3s ease;
 }
