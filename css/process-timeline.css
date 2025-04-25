@@ -358,6 +358,8 @@ body.dark-mode .process-timeline .project-info p {
     .process-timeline {
         padding-left: 1rem;
         padding-right: 1rem;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+        width: 100%; /* Ensure full width */
     }
     
     .process-timeline::before {
@@ -366,15 +368,15 @@ body.dark-mode .process-timeline .project-info p {
     }
     
     .process-timeline .project-bar {
-        width: 85%;
-        max-width: 450px;
+        width: 90%; /* Slightly wider for better visibility */
+        max-width: 400px; /* Limit maximum width */
         margin-left: auto !important;
         margin-right: auto !important;
         align-self: center !important;
         position: relative;
         left: 0 !important;
         right: 0 !important;
-        transform: scale(0.9);
+        transform: none; /* Remove scale down to prevent overflow */
     }
     
     .process-timeline .project-bar.align-right {
@@ -383,8 +385,19 @@ body.dark-mode .process-timeline .project-info p {
         align-self: center !important;
     }
     
+    /* Adjust project info for better mobile display */
+    .process-timeline .project-info {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .process-timeline .project-info h4 {
+        font-size: 1.2rem; /* Make heading visible */
+    }
+    
     .process-timeline .project-bar::before {
         width: 30px;
+        display: none; /* Hide connectors on mobile for cleaner look */
     }
     
     .process-timeline .project-bar:nth-child(odd)::before {
@@ -398,6 +411,17 @@ body.dark-mode .process-timeline .project-info p {
     .process-timeline .project-bar:hover::before {
         width: 30px; /* Keep the same width on hover for mobile */
     }
+    
+    /* Reduce gap between projects on mobile */
+    .process-timeline {
+        gap: 2.5rem;
+    }
+    
+    /* Ensure images don't overflow */
+    .process-timeline .project-banner {
+        height: 250px; /* Slightly shorter for mobile */
+    }
+
     
     .process-stage {
         text-align: center;

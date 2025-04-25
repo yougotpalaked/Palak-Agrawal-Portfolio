@@ -1596,19 +1596,19 @@ body.dark-mode .download-note {
     
     .hero .eye-container {
         position: relative;
-        gap: 40px; /* Increased from 20px to provide better spacing for larger eyes */
+        gap: 30px; /* Adjusted gap for better spacing */
         width: 100%;
-        max-width: 400px; /* Increased from 280px to accommodate larger eyes on mobile */
+        max-width: 450px; /* Increased to accommodate larger eyes on mobile */
         margin: 0 auto 30px auto; /* Center horizontally with bottom margin */
         display: flex;
         justify-content: center;
     }
     
     .hero .eye-wrapper {
-        width: 200px; /* Increased from 140px for larger eyes on mobile */
-        height: 200px; /* Increased from 140px for larger eyes on mobile */
-        min-width: 200px; /* Ensure minimum size */
-        min-height: 200px; /* Ensure minimum size */
+        width: 220px; /* Increased size for mobile */
+        height: 220px; /* Increased size for mobile */
+        min-width: 220px; /* Ensure minimum size */
+        min-height: 220px; /* Ensure minimum size */
     }
     
     .hero .eye-wrapper::after {
@@ -1639,15 +1639,17 @@ body.dark-mode .download-note {
         margin-bottom: 15px;
     }
     
-    /* Increase eye size for mobile */
-    .hero .eye-wrapper {
-        width: 180px; /* Increased from 150px for larger eyes on mobile */
-        height: 180px; /* Increased from 150px for larger eyes on mobile */
-    }
+    /* Removed duplicate eye-wrapper definition */
     
     .hero-content p {
         font-size: 1.2rem;
         text-align: center;
+    }
+    
+    /* Increase pupil size for mobile to match larger eyes */
+    .hero .pupil {
+        width: 65%;
+        height: 65%;
     }
 }
 

@@ -1509,6 +1509,7 @@ body.dark-mode .download-note {
     max-width: 600px;
     margin: 0 auto; /* Center horizontally */
     pointer-events: auto; /* Ensure interactions work */
+    
 }
 
 .hero .eye-wrapper {

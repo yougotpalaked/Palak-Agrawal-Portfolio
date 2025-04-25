@@ -69,7 +69,7 @@
 }
 
 .next-project-container:hover .next-project-title {
-    color: var(--accent-color);
+    color: var(--secondary-text-color);
 }
 
 .next-project-description {
@@ -84,7 +84,7 @@
     display: inline-block;
     padding: 0.8rem 2rem;
     background-color: var(--accent-color);
-    color: white;
+    color: rgb(40, 39, 39);
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
@@ -94,7 +94,7 @@
 
 .next-project-button:hover {
     background-color: transparent;
-    color: var(--accent-color);
+    color: var(--secondary-text-color);
 }
 
 /* Responsive adjustments */
