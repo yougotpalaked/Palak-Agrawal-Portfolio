@@ -325,7 +325,7 @@ body.dark-mode .burger div {
     align-items: center;
     justify-content: center; /* Center content horizontally */
     background-color: var(--bg-color);
-    margin-top: 110px; /* To account for fixed header */
+    margin-top: 130px; /* To account for fixed header */
     padding: 0 var(--spacing-lg);
     transition: background-color 0.3s ease;
 }
@@ -366,6 +366,7 @@ body.dark-mode .hero {
 .hero-content {
     width: 100%;
     text-align: center;
+   
     padding: 0 var(--spacing-md);
     animation: fadeInUp 1s ease;
     max-width: 600px;
@@ -383,12 +384,14 @@ body.dark-mode .hero {
 }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
     color: var(--dark-gray);
     animation: fadeInUp 1s ease 0.2s;
     animation-fill-mode: both;
     transition: color 0.3s ease;
+    text-align: center;
+    
 }
 
 body.dark-mode .hero-content p {
@@ -882,15 +885,15 @@ body.dark-mode .copyright {
     .hero .eye-container {
         width: 90%;
         max-width: 300px;
-        gap: 30px; /* Increased spacing between eyes */
+        gap: 10px; /* Increased spacing between eyes */
         flex-direction: row; /* Ensure eyes stay horizontal on mobile */
     }
     
     /* Make eyes perfectly round in mobile view with increased size */
     .hero .eye-container .eye-wrapper {
         border-radius: 50% !important;
-        width: 90px !important; /* Increased from 60px */
-        height: 90px !important; /* Increased from 60px */
+        width: 100px !important; /* Increased from 60px */
+        height: 100px !important; /* Increased from 60px */
         min-width: 90px !important; /* Increased from 60px */
         min-height: 90px !important; /* Increased from 60px */
     }
