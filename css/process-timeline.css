@@ -7,8 +7,8 @@
 /* Section Description */
 .section-description {
     text-align: center;
-    color: var(--dark-gray);
-    margin-bottom: 0.1rem;
+    color: var(--dark-card-bg);
+    margin-bottom: -5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +18,7 @@
 }
 
 body.dark-mode .section-description {
-    color: var(--dark-medium-gray);
+    color: var(--primary-color);
 }
 
 /* Process Timeline Specific Styles */
@@ -40,17 +40,26 @@ body.dark-mode .section-description {
 
 /* Process Timeline Connection Line - Center vertical line */
 .process-timeline::before {
-    content: '';
+    
+    content: '_____________';
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 4px;
-    height: 100%;
+    width: 2px;
+    height: 45%;
     background-color: var(--primary-color);
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: 0;
     transform: translateX(-50%);
+     /* <-- this flips it horizontally */
+}
+/* Special class for flipped ones */
+.process-timeline.flipped::before {
+    transform: translateX(-50%) scaleX(-1); /* flipped */
 }
 
 body.dark-mode .process-timeline::before {
@@ -65,7 +74,7 @@ body.dark-mode .process-timeline::before {
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    box-shadow: 10px 30px 25px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
@@ -142,35 +151,36 @@ body.dark-mode .process-timeline .project-bar:hover {
 .process-stage {
     padding: 1rem 2rem;
     color: var(--dark-gray);
-    width: auto;
+    width: 500px;
+    height: 200px;
     display: block;
     z-index: 5;
     transition: color 0.3s ease, background-color 0.3s ease;
     text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    position: relative;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: -230px;
+    margin-top: 7rem;
+    position: relative;;
+    max-width: 800px;
+    margin-left: 800px;
     background-color: rgba(var(--primary-color-rgb), 0.05);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
+
 body.dark-mode .process-stage {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(43, 42, 42, 0.544);
     color: var(--dark-medium-gray);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(25, 25, 25, 0.1);
 }
 
 .process-stage h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 0;
     color: var(--primary-color);
-    font-weight: 100;
+    font-weight: 400;
     transition: color 0.3s ease;
-    padding: 0.2rem 0;
+    padding: 0.2rem 0;;
 }
 
 body.dark-mode .process-stage h3 {
@@ -317,12 +327,13 @@ body.dark-mode .process-timeline .project-info h4 {
 }
 
 .process-timeline .project-info p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--dark-gray);
     margin: 0;
-    font-weight: 100;
+    font-weight: 500;
     transition: color 0.3s ease;
     line-height: 1.5;
+    display: inline-block;
 }
 
 body.dark-mode .process-timeline .project-info p {
@@ -474,7 +485,7 @@ body.dark-mode .process-timeline .project-info p {
     }
     
     .process-stage h3 {
-        font-size: 1rem;
+        font-size: rem;
     }
     
     /* Adjust spacing between cards */

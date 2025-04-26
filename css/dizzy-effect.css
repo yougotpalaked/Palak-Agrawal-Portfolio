@@ -175,7 +175,7 @@
   transition: none !important; /* Remove transition to ensure it stays fixed */
 }
 
-.eye-container.dizzy .eye-wrapper:nth-last-child(2) .pupil {
-    transform: translate(-25%, -20%) !important; /* Left eye: top-right */
+.eye-container.dizzy .eye-wrapper:nth-child(2) .pupil {
+    transform: translate(-25%, -20%) !important; /* Right eye: top-left */
     transition: none !important; /* Remove transition to ensure it stays fixed */
   }
