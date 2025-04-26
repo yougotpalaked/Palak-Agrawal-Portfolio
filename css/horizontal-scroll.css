@@ -20,6 +20,9 @@
     .works-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -184,16 +187,20 @@ body.dark-mode .scroll-arrow {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .project-bar {
-        width: 320px; /* Increased from 280px for better mobile display */
+        width: 100%; /* Make cards full width of their container */
+        max-width: 350px; /* Set a maximum width to prevent stretching */
+        margin: 0 auto; /* Center the cards */
     }
     
     .project-banner {
         height: 180px;
+        width: 100%;
     }
     
     .project-info {
         padding: 1rem;
-        width: 80%; /* Adjusted for better proportions on mobile */
+        width: 90%; /* Slightly wider for better text display */
+        margin: 0 auto; /* Ensure it's centered */
     }
     
     .scroll-arrow {

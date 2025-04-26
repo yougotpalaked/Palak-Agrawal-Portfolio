@@ -882,17 +882,17 @@ body.dark-mode .copyright {
     .hero .eye-container {
         width: 90%;
         max-width: 300px;
-        gap: 20px; /* Maintain horizontal spacing between eyes */
+        gap: 30px; /* Increased spacing between eyes */
         flex-direction: row; /* Ensure eyes stay horizontal on mobile */
     }
     
-    /* Make eyes perfectly round in mobile view */
+    /* Make eyes perfectly round in mobile view with increased size */
     .hero .eye-container .eye-wrapper {
         border-radius: 50% !important;
-        width: 60px !important;
-        height: 60px !important;
-        min-width: 60px !important;
-        min-height: 60px !important;
+        width: 90px !important; /* Increased from 60px */
+        height: 90px !important; /* Increased from 60px */
+        min-width: 90px !important; /* Increased from 60px */
+        min-height: 90px !important; /* Increased from 60px */
     }
     
     .hero .eye-container .eye,
@@ -1605,10 +1605,10 @@ body.dark-mode .download-note {
     }
     
     .hero .eye-wrapper {
-        width: 220px; /* Increased size for mobile */
-        height: 220px; /* Increased size for mobile */
-        min-width: 220px; /* Ensure minimum size */
-        min-height: 220px; /* Ensure minimum size */
+        width: 250px; /* Further increased size for mobile */
+        height: 250px; /* Further increased size for mobile */
+        min-width: 250px; /* Ensure minimum size */
+        min-height: 250px; /* Ensure minimum size */
     }
     
     .hero .eye-wrapper::after {
