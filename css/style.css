@@ -1162,11 +1162,11 @@ body.dark-mode .case-study-image {
         width: 100vw;
         margin-left: -16px;
         margin-right: -16px;
-    
-   
-     overflow: hidden;
-    transition: all 0.3s ease;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
 }
+
 
 .case-study-image img {
     width: 100%;
