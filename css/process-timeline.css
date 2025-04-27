@@ -493,14 +493,35 @@ body.dark-mode .process-timeline .project-info p {
         height: 250px; /* Slightly shorter for mobile */
     }
 
-    
+    /* Process stage mobile styling */
     .process-stage {
         text-align: center;
         padding-left: 0;
         position: relative;
-        margin: 2rem auto 1.5rem;
+        margin: 0 auto;
         max-width: 300px;
         width: 90%;
+        height: auto;
+        margin-bottom: 1rem;
+        top: 0;
+        transform: translateX(0);
+        z-index: 10;
+    }
+    
+    /* Reset any special positioning classes in mobile view */
+    .process-stage.align-left,
+    .process-stage.align-right {
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(0) !important;
+        top: 0;
+        max-width: 300px;
+        width: 90%;
+    }
+    
+    /* Hide paragraph text in process stages on mobile, only show h3 */
+    .process-stage p {
+        display: none;
     }
 }
 
@@ -554,18 +575,24 @@ body.dark-mode .process-timeline .project-info p {
     
     /* Reduce size of process stage labels */
     .process-stage {
-        max-width: 300px;
+        max-width: 280px;
         width: 90%;
         padding: 0.5rem 1rem;
-        margin: 2rem auto 1.5rem;
+        margin: 0 auto 1.5rem;
         height: auto;
+        position: relative;
+        z-index: 10;
     }
     
     /* Center all process stages on mobile */
-    .process-stage {
+    .process-stage,
+    .process-stage.align-left,
+    .process-stage.align-right {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        transform: translateX(0) !important;
+        top: 0;
     }
     
     .process-timeline:nth-of-type(odd) + .process-stage,
@@ -577,7 +604,7 @@ body.dark-mode .process-timeline .project-info p {
     }
     
     .process-stage h3 {
-        font-size: rem;
+        font-size: 1.3rem;
     }
     
     /* Adjust spacing between cards */
