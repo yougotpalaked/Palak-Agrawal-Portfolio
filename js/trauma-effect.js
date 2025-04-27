@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastTraumaTime = 0;
     const traumaCooldown = 3000; // 3 seconds cooldown between trauma effects
     
+    // Variables for tap detection on mobile
+    let tapCount = 0;
+    let lastTapTime = 0;
+    const tapThreshold = 4; // Number of taps required to trigger effect
+    const tapTimeWindow = 2000; // Time window in ms for counting taps (2 seconds)
+    
     // Function to calculate cursor speed
     function calculateCursorSpeed() {
         if (cursorPositions.length < 3) return 0;
@@ -163,7 +169,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const directionChangeThreshold = 2;
             
             if (speed > speedThreshold && directionChanges >= directionChangeThreshold) {
+                // We won't trigger the effect immediately on mobile
+                // This will be handled by the tap counter system
+            }
+        }
+    }, { passive: true });
+    
+    // Add touchstart listener to count taps on the eye container
+    document.addEventListener('touchstart', function(e) {
+        // Only count taps on the eye container or its children
+        if (e.target.closest('.eye-container')) {
+            const currentTime = Date.now();
+            
+            // Check if this tap is within the time window of the last tap
+            if (currentTime - lastTapTime > tapTimeWindow) {
+                // Reset tap count if it's been too long since the last tap
+                tapCount = 1;
+            } else {
+                // Increment tap count if within time window
+                tapCount++;
+            }
+            
+            // Update last tap time
+            lastTapTime = currentTime;
+            
+            // Only trigger the effect if we've reached the tap threshold
+            if (tapCount >= tapThreshold) {
                 triggerTraumaEffect();
+                tapCount = 0; // Reset tap count after triggering
             }
         }
     }, { passive: true });
