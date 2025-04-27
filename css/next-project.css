@@ -84,13 +84,14 @@
     display: inline-block;
     padding: 0.8rem 2rem;
     background-color: var(--accent-color);
-    color: rgb(233, 231, 231);
+    color: rgb(126, 124, 124);
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid var(--accent-color);
 }
+
 
 .next-project-button:hover {
     background-color: transparent;

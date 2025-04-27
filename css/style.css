@@ -1037,6 +1037,7 @@ body.dark-mode .case-study-header {
     display: flex;
     flex-direction: column;
     margin-top: -70px;
+    margin-bottom: -110px;
 }
 
 @media screen and (max-width: 768px) {
