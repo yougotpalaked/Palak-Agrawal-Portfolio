@@ -93,9 +93,9 @@ body.dark-mode .process-index-item.active {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Hide process index on mobile as requested */
     .process-index-container {
-        right: 1rem;
-        padding: 0.75rem;
+        display: none;
     }
     
     .process-index-item {

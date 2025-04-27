@@ -1036,6 +1036,14 @@ body.dark-mode .case-study-header {
     min-height: calc(100vh - 80px - 300px); /* Accounts for header and footer */
     display: flex;
     flex-direction: column;
+    margin-top: -70px;
+}
+
+@media screen and (max-width: 768px) {
+    .case-study-content {
+        padding: 0;
+        margin-top: 0;
+    }
 }
 
 .case-study-images {
@@ -1129,6 +1137,13 @@ body.dark-mode .case-study-banner {
     margin: var(--spacing-lg) 0;
 }
 
+@media screen and (max-width: 768px) {
+    .case-study-images {
+        gap: 0;
+        margin: 0;
+    }
+}
+
 /* Dark mode styles for case study images */
 body.dark-mode .case-study-image {
     background-color: var(--dark-light-gray);
@@ -1139,7 +1154,17 @@ body.dark-mode .case-study-image {
     min-height: 50px; /* Minimal height when empty */
     background-color: var(--light-gray);
     border-radius: 8px;
-    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .case-study-image {
+        border-radius: 0;
+        width: 100vw;
+        margin-left: -16px;
+        margin-right: -16px;
+    
+   
+     overflow: hidden;
     transition: all 0.3s ease;
 }
 
@@ -1184,6 +1209,22 @@ body.dark-mode .text-section {
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+    .video-embed {
+        width: 100vw;
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: 0;
+    }
+    
+    .video-embed video {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
 
 /* Dark mode styles for video embed */
 body.dark-mode .video-embed {

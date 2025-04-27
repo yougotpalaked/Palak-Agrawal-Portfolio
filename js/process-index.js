@@ -82,7 +82,7 @@ function observeSections() {
             }
         });
     }, {
-        threshold: 0.9, // Trigger when 30% of the element is visible
+        threshold: 0.3, // Trigger when 30% of the element is visible
         rootMargin: '-10% 0px -10% 0px' // Adjust the trigger area
     });
     
