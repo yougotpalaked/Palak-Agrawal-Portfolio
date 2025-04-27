@@ -164,38 +164,43 @@ body.dark-mode .process-timeline .project-bar:hover {
     transition: color 0.3s ease, background-color 0.3s ease;
     text-align: center;
     position: relative;
-    margin-bottom: 2rem;
-    margin-top: -9rem;
+    margin-bottom: 4rem; /* Increased bottom margin */
+    margin-top: 0; /* Removed negative margin */
     max-width: 800px;
     background-color: rgba(var(--primary-color-rgb), 0.05);
     border-radius: 8px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
     align-self: center; /* Center align by default */
-
-}
-
-/* Alternate positioning for process stages - centered with slight offset */
-
-
- .process-stage.align-left {
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
     margin-left: auto;
     margin-right: auto;
-    transform: translateX(-62%); /* Slight offset to the right */
-    align-self: center; /* Center align with offset */
+}
+
+/* Alternate positioning for process stages - centered with slight offset z*/
+
+
+.process-stage.align-left {
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-50%); /* Center horizontally */
+    align-self: center;
     position: relative;
     max-width: 50%;
-    top: 230px;
+    top: 0; /* Position above timeline */
+    z-index: 10; /* Ensure it's above other elements */
 }
 
 
 .process-stage.align-right {
     margin-left: auto;
     margin-right: auto;
-    transform: translateX(62%); /* Slight offset to the right */
-    align-self: center; /* Center align with offset */
+    transform: translateX(-50%); /* Center horizontally */
+    align-self: center;
     position: relative;
     max-width: 50%;
-    top: 230px;
+    top: 0; /* Position above timeline */
+    z-index: 10; /* Ensure it's above other elements */
 }
 
 
