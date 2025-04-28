@@ -1711,7 +1711,7 @@ body.dark-mode .download-note {
     height: 100%;
     background: rgb(112, 112, 112); /* Further increased opacity for more visible shadow */
     filter: blur(19px); /* Increased blur for softer, more spread shadow */
-    opacity: 30%;
+    opacity: 100%;
     border-radius: 50%;
     z-index: 3;
     top: 0;
