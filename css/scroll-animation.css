@@ -9,13 +9,14 @@
     justify-content: center;
     margin-top: 20px;
     cursor: pointer;
-    animation: breathe 4s ease-in-out infinite;
+    animation: breathe 2s ease-in-out infinite;
 }
 
 .scroll-icon i {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--primary-color);
     transition: all 0.3s ease;
+    opacity: 50%;
 }
 
 body.dark-mode .scroll-icon i {
