@@ -218,6 +218,12 @@ body.dark-mode .process-stage h3 {
     color: var(--dark-primary);
 }
 
+.process-stage p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin: 0;   
+}
+
 /* Connectors for zigzag effect */
 .process-timeline .project-bar::before {
     content: '';
@@ -359,7 +365,7 @@ body.dark-mode .process-timeline .project-info h4 {
 
 .process-timeline .project-info p {
     font-size: 1.1rem;
-    color: var(--dark-gray);
+    color: var(--primary-color);
     margin: 0;
     font-weight: 500;
     transition: color 0.3s ease;
