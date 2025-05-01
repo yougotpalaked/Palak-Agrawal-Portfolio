@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Check if movement is rapid and erratic enough to trigger trauma
         // Speed threshold is higher for desktop to account for faster mouse movements
-        const speedThreshold = 20; // Adjust based on testing
+        const speedThreshold = 40; // Adjust based on testing
         const directionChangeThreshold = 2; // At least 2 significant direction changes
         
         if (speed > speedThreshold && directionChanges >= directionChangeThreshold) {
