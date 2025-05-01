@@ -325,7 +325,7 @@ body.dark-mode .burger div {
     align-items: center;
     justify-content: center; /* Center content horizontally */
     background-color: var(--bg-color);
-    margin-top: 110px; /* To account for fixed header */
+    margin-top: 130px; /* To account for fixed header */
     padding: 0 var(--spacing-lg);
     transition: background-color 0.3s ease;
 }
@@ -391,18 +391,16 @@ body.dark-mode .hero {
     animation-fill-mode: both;
     transition: color 0.3s ease;
     text-align: center;
-    font-weight: 100;
     
 }
 
 body.dark-mode .hero-content p {
-    color: var(--dark-text);
+    color: var(--dark-dark-gray);
 }
 
 /* ===== UX PROCESS TIMELINE ===== */
 .ux-process {
     padding: var(--spacing-xxl) 0;
-    padding-top: var(--spacing-xl);
 }
 
 .timeline {
@@ -1567,9 +1565,9 @@ body.dark-mode .download-note {
 
 .hero .eye-wrapper {
     position: relative;
-    width: 250px; /* Increased size */
-    height: 255px; /* Made equal to width for perfect circle */
-
+    width: 400px; /* Increased size */
+    height: 300px; /* Made equal to width for perfect circle */
+    background-image: url('../afterafterquiz.png');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -1713,7 +1711,7 @@ body.dark-mode .download-note {
     height: 100%;
     background: rgb(112, 112, 112); /* Further increased opacity for more visible shadow */
     filter: blur(19px); /* Increased blur for softer, more spread shadow */
-    opacity: 100%;
+    opacity: 30%;
     border-radius: 50%;
     z-index: 3;
     top: 0;
