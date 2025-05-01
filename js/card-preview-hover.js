@@ -53,35 +53,37 @@ function initScrollableCardPreview() {
             const projectLink = bar.querySelector('.project-link');
             const caseStudyUrl = projectLink ? projectLink.getAttribute('href') : '';
             
-            // Determine the appropriate case study image based on the project
-            let caseStudyImageSrc = '';
-            
-            // Map project case study pages to their respective case study images
-            if (caseStudyUrl.includes('zap-app')) {
-                caseStudyImageSrc = 'zap/1.png'; // First case study image from zap-app.html
-            } else if (caseStudyUrl.includes('zap-business-portal')) {
-                caseStudyImageSrc = 'ZAPB/Frame 15.png'; // Case study image from zap-business-portal.html
-            } else if (caseStudyUrl.includes('midair')) {
-                caseStudyImageSrc = 'midair/midaircase1.png'; // Case study image from midair.html
-            } else if (caseStudyUrl.includes('qr-code-auto')) {
-                caseStudyImageSrc = 'auto/autocase.png'; // Case study image from qr-code-auto.html
-            } else if (caseStudyUrl.includes('future-you')) {
-                caseStudyImageSrc = 'futureyouimg/afterafterquiz.png'; // Case study image from future-you.html
-            } else if (caseStudyUrl.includes('focus-read')) {
-                caseStudyImageSrc = 'focusread/Focusread2.png'; // Case study image from focus-read.html
-            } else {
-                // Fallback to the project banner image if no specific case study image is found
-                caseStudyImageSrc = bar.querySelector('.project-image').src;
-            }
-            
-            previewContent.innerHTML = `
-               
-                <h5> Case Study Preview</h5>
-                <div class="preview-image">
-                    <img src="${caseStudyImageSrc}" alt="Case study preview" />
-                </div>
-                <p>Click anywhere on this card to view the full case study with detailed information about the project process, challenges, and outcomes.</p>
-            `;
+           // Determine the appropriate case study image based on the project
+let caseStudyImageSrc = '';
+
+if (caseStudyUrl.includes('zap-app')) {
+    caseStudyImageSrc = 'zap/1.png';
+} else if (caseStudyUrl.includes('zap-business-portal')) {
+    caseStudyImageSrc = 'ZAPB/Frame 15.png';
+} else if (caseStudyUrl.includes('midair')) {
+    caseStudyImageSrc = 'midair/midaircase1.png';
+} else if (caseStudyUrl.includes('qr-code-auto')) {
+    caseStudyImageSrc = 'auto/autocase.png';
+} else if (caseStudyUrl.includes('future-you')) {
+    caseStudyImageSrc = 'futureyouimg/frame 14.png';
+} else if (caseStudyUrl.includes('focus-read')) {
+    caseStudyImageSrc = 'focusread/Focusread1.png';
+} else {
+    caseStudyImageSrc = bar.querySelector('.project-image').src;
+}
+
+// 🔹 Preload image to reduce hover delay
+const preloadImage = new Image();
+preloadImage.src = caseStudyImageSrc;
+
+previewContent.innerHTML = `
+    <h5> Case Study Preview</h5>
+    <div class="preview-image">
+        <img src="${caseStudyImageSrc}" alt="Case study preview" loading="eager" />
+    </div>
+    <p>Click anywhere on this card to view the full case study.</p>
+`;
+
             
             scrollableContent.appendChild(previewContent);
         }

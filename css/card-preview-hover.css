@@ -8,7 +8,7 @@
 .process-timeline .project-bar {
     position: relative;
     overflow: hidden; /* Hide overflow by default */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 /* Content container that will be scrollable */
@@ -80,7 +80,7 @@ body.dark-mode .process-timeline .project-bar .scrollable-content::-webkit-scrol
     font-size: 0.7rem;
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.1s ease, transform 0.1s ease;
     z-index: 15;
     pointer-events: none;
 }
